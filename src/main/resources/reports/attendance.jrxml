@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+                                  http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="attendance" pageWidth="595" pageHeight="842"
+              columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20"
+              uuid="092ccf5a-e3e1-4c2e-a45c-74e4788d6129">
+
+    <!-- Bean fields -->
+    <field name="id" class="java.lang.Long"/>
+    <field name="date" class="java.time.LocalDate"/>
+    <field name="dutyShift" class="java.lang.String"/>
+    <field name="present" class="java.lang.Boolean"/>
+    <field name="staffId" class="java.lang.Long"/>
+    <field name="status" class="java.lang.String"/>
+    <field name="staffName" class="java.lang.String"/>
+
+    <!-- Title -->
+    <title>
+        <band height="60">
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="60" backcolor="#87E6E2"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="24" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Attendance Report]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <!-- Column Headers -->
+    <columnHeader>
+        <band height="30">
+            <staticText>
+                <reportElement x="0" y="0" width="50" height="30" backcolor="#E359C0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[ID]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="50" y="0" width="80" height="30" backcolor="#E359C0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Date]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="130" y="0" width="80" height="30" backcolor="#E359C0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Duty Shift]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="210" y="0" width="50" height="30" backcolor="#E359C0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Present]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="260" y="0" width="60" height="30" backcolor="#E359C0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Staff ID]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="320" y="0" width="100" height="30" backcolor="#E359C0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Staff Name]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="420" y="0" width="135" height="30" backcolor="#E359C0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Status]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <!-- Detail Rows -->
+    <detail>
+        <band height="25">
+            <textField>
+                <reportElement x="0" y="0" width="50" height="25" backcolor="#ED7977"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="50" y="0" width="80" height="25" backcolor="#ED7977"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="130" y="0" width="80" height="25" backcolor="#ED7977"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{dutyShift}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="210" y="0" width="50" height="25" backcolor="#ED7977"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{present}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="260" y="0" width="60" height="25" backcolor="#ED7977"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{staffId}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="320" y="0" width="100" height="25" backcolor="#ED7977"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{staffName}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="420" y="0" width="135" height="25" backcolor="#ED7977"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>
